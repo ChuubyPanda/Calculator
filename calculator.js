@@ -50,6 +50,11 @@ number.forEach(number => {
         displayText = displayText + number.textContent;
     });
 });
+number.forEach(number =>{
+    number.addEventListener('mouseover', () =>{
+        number.style.box-shadow: -1px -1px 5px rgba(255,255,255,.6), 1px 1px 15px rgba(0,0,0,.3);
+    });
+});
 sign.forEach(sign => {
     sign.addEventListener('click', () => {
         if(displayText[displayText.length-1] !== sign.textContent){
