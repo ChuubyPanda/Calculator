@@ -14,14 +14,23 @@ function division(a, b){
 function operate(operator, a, b){
     if(operator === '+'){
         if(a.includes('.') || b.includes('.')){
-            return add(parseFloat(a),parseFloat(b));
+            return add(parseFloat(a),parseFloat(b)).toFixed(2);
         }
         return add(parseInt(a), parseInt(b));
     }else if(operator === '-'){
+        if(a.includes('.') || b.includes('.')){
+            return sub(parseFloat(a),parseFloat(b)).toFixed(2);
+        }
         return sub(a, b);
     }else if(operator === '*'){
+        if(a.includes('.') || b.includes('.')){
+            return multiply(parseFloat(a),parseFloat(b)).toFixed(2);
+        }
         return multiply(a, b);
     }else if(operator === '/'){
+        if(a.includes('.') || b.includes('.')){
+            return division(parseFloat(a),parseFloat(b)).toFixed(2);
+        }
         return division(a, b);
     }
 }
@@ -83,7 +92,11 @@ clear.addEventListener('click', () => {
 })
 
 decimal.addEventListener('click', ()=>{
-    if(!display.textContent.includes('.')){
+    if(display.textContent === '+' || display.textContent === '-' || display.textContent === '*' || display.textContent === '/'){
+        display.textContent = '.';
+        displayText = displayText + '.';
+    }
+    if(!display.textContent.includes('.') && !(display.textContent === '+' || display.textContent === '-' || display.textContent === '*' || display.textContent === '/')){
         display.textContent = display.textContent + '.';
         displayText += '.';
     }
