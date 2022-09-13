@@ -50,6 +50,16 @@ number.forEach(number => {
         displayText = displayText + number.textContent;
     });
 });
+number.forEach(number => {
+    number.addEventListener('keyup', () => {
+        if(displayText[displayText.length-2] === '+' || displayText[displayText.length-2] === '-' || displayText[displayText.length-2] === '*' || displayText[displayText.length-2] === '/'){
+            display.textContent = number.textContent;
+        }else{
+            display.textContent =  display.textContent + number.textContent;
+        }
+        displayText = displayText + number.textContent;
+    });
+});
 sign.forEach(sign => {
     sign.addEventListener('click', () => {
         if(displayText[displayText.length-1] !== sign.textContent){
@@ -90,7 +100,6 @@ clear.addEventListener('click', () => {
     display.textContent = '';
     displayText = '';
 })
-
 decimal.addEventListener('click', ()=>{
     if(display.textContent === '+' || display.textContent === '-' || display.textContent === '*' || display.textContent === '/'){
         display.textContent = '.';

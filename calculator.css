@@ -1,5 +1,19 @@
+@font-face {
+    font-family: lofi;
+    src: url(LofiLifestyleRegular-2OM9v.ttf);
+}
 body{
-    background-color: white ;
+    background-color: #CAF1DE;
+    position: fixed;
+    top: 20%;
+    left: 49%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+.title{
+    justify-content: center;
+    text-align: center;
+    font-family: lofi;
 }
 .display{
     margin:10px;
@@ -92,7 +106,6 @@ button{
 }
 
 button:hover{
-    color:blue;
     position: relative;
     box-shadow: inset -2px -2px 5px rgba(255,255,255,.8), inset 2px 2px 5px rgba(0,0,0,.3), -2px -2px 5px rgba(255,255,255,.8), 2px 2px 5px rgba(0,0,0,.3);
 }
