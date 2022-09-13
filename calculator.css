@@ -11,15 +11,27 @@ body{
     border-radius: 9999px;
     text-align: center;
 }
-.number{
+.display:hover{
+    box-shadow: -1px -1px 5px rgba(255,255,255,.3), 1px 1px 5px rgba(0,0,0 .3), inset 2px 2px 5px rgba(255,255,255,.3), inset 2px 2px 4px rgba(0,0,0,.3);
+}
+button{
     height:100px;
     width:100px;
     background-color: #e8ecf2;
     color: #73787d;
     font-size: 30px;
+    position: relative;
     box-shadow: -5px -5px 10px rgba(255,255,255,.8), 5px 5px 10px rgba(0,0,0,.25);
     border-radius: 50%;
-    border: 0px;
+    border: 8px;
+    outline:none;
     text-align: center;
     margin: 10px;
+    display: inline-flexbox;
+}
+
+button:hover{
+    color:blue;
+    position: relative;
+    box-shadow: inset -2px -2px 5px rgba(255,255,255,.8), inset 2px 2px 5px rgba(0,0,0,.3), -2px -2px 5px rgba(255,255,255,.8), 2px 2px 5px rgba(0,0,0,.3);
 }

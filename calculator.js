@@ -39,7 +39,7 @@ const sign = document.querySelectorAll('.sign');
 const display = document.querySelector('.display');
 const equal = document.querySelector('.equal');
 const clear = document.querySelector('.clear');
-const decimal = document.querySelector('.decimal')
+const decimal = document.querySelector('.decimal');
 number.forEach(number => {
     number.addEventListener('click', () => {
         if(displayText[displayText.length-2] === '+' || displayText[displayText.length-2] === '-' || displayText[displayText.length-2] === '*' || displayText[displayText.length-2] === '/'){
@@ -48,11 +48,6 @@ number.forEach(number => {
             display.textContent =  display.textContent + number.textContent;
         }
         displayText = displayText + number.textContent;
-    });
-});
-number.forEach(number =>{
-    number.addEventListener('mouseover', () =>{
-        number.style.box-shadow: -1px -1px 5px rgba(255,255,255,.6), 1px 1px 15px rgba(0,0,0,.3);
     });
 });
 sign.forEach(sign => {
