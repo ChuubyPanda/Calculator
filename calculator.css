@@ -2,7 +2,8 @@ body{
     background-color: white ;
 }
 .display{
-    width: 100px;
+    margin:10px;
+    width: 450px;
     height: 40px;
     background-color: #e8ecf2;
     color: #73787d;
@@ -13,6 +14,63 @@ body{
 }
 .display:hover{
     box-shadow: -1px -1px 5px rgba(255,255,255,.3), 1px 1px 5px rgba(0,0,0 .3), inset 2px 2px 5px rgba(255,255,255,.3), inset 2px 2px 4px rgba(0,0,0,.3);
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    height:100px;
+    width: 100px;
+    grid-template-areas: "one two three add" "four five six sub" "seven eight nine mult" "decimal zero equal divide"
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.zero{
+    grid-area: zero;
+}
+.divide{
+    grid-area: divide;
+}
+.add{
+    grid-area: add;
+}
+.sub{
+    grid-area: sub;
+}
+.mult{
+    grid-area: mult;
+}
+.equal{
+    grid-area: equal;
+}
+.decimal{
+    grid-area: decimal;
 }
 button{
     height:100px;
@@ -27,11 +85,18 @@ button{
     outline:none;
     text-align: center;
     margin: 10px;
-    display: inline-flexbox;
+    display: flex;
+    flex-grow:1;
+    justify-content: center;
+    align-items:center;
 }
 
 button:hover{
     color:blue;
     position: relative;
     box-shadow: inset -2px -2px 5px rgba(255,255,255,.8), inset 2px 2px 5px rgba(0,0,0,.3), -2px -2px 5px rgba(255,255,255,.8), 2px 2px 5px rgba(0,0,0,.3);
+}
+button{
+    position: relative;
+    box-shadow: -2px -2px 5px rgba(255,255,255,.8), 2px 2px 5px rgba(0,0,0,.3);
 }
